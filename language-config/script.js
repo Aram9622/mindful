@@ -202,39 +202,84 @@ Util.getIndexInArray = function (array, el) {
             body: new URLSearchParams({ lang }),
             credentials: 'same-origin'
         })
-            .then(r => r.json())              // теперь распарсится без ошибок
+            .then(r => r.json())
             .then(data => {
                 setLangText(data)
             })
             .catch(err => console.error('Fetch failed:', err));
     }
     function setLangText(data){
-        document.getElementById('title').textContent = data.tatev.title;
-        document.getElementById('description').textContent = data.description;
-
-        document.getElementById('main_info_description_3').textContent = data.main_info_description_3;
-        document.getElementById('main_info_description_2').textContent = data.main_info_description_2;
-        document.getElementById('main_info_description_1').textContent = data.main_info_description_1;
-        document.getElementById('main_info_title').textContent = data.main_info_title;
-        document.getElementById('main_info_sub_heading').textContent = data.main_info_sub_heading;
+        menuTranslate(data.menu)
+        formTranslate(data)
+        mainInfoTranslate(data)
     }
-    function loadLanguage(lang) {
-        // fetch(`lang/${lang}.json`)
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         document.getElementById('title').textContent = data.title;
-        //         document.getElementById('description').textContent = data.description;
-        //     })
-        //     .catch(err => {
-        //         console.error(`Error loading ${lang} language file`, err);
-        //     });
+    function menuTranslate(menuItem){
+        const home = document.getElementById('home-link') ?? null;
+        const counselor = document.getElementById('counselor-link') ?? null;
+        const about = document.getElementById('about-link') ?? null;
+        const contact = document.getElementById('contact-link') ?? null;
+        if(home && counselor && about && contact){
+            document.getElementById('home-link').textContent = menuItem.home;
+            document.getElementById('counselor-link').textContent = menuItem.counselor;
+            document.getElementById('about-link').textContent = menuItem.about;
+            document.getElementById('contact-link').textContent = menuItem.contact;
+        }
+        else{
+            document.getElementById('home-link').textContent = menuItem.home;
+            document.getElementById('counselor-link').textContent = menuItem.counselor;
+        }
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-    const savedLang = localStorage.getItem('lang');
-    if (savedLang) loadLanguage(savedLang);
-    });
+    function formTranslate(data){
+        const formTitle = document.getElementById('form-title') ?? null;
+        formTitle.textContent = data.form_title
+        if(formTitle){
+            formItemTranslate(data)
+        }
+    }
+    function formItemTranslate(data){
+        const name = document.getElementById('form-name') ?? null;
+        const email = document.getElementById('form-email') ?? null;
+        const message = document.getElementById('form-message') ?? null;
+        const subject = document.getElementById('form-subject') ?? null;
+        const submit = document.getElementById('form-submit') ?? null;
+        if(name && email && message && subject && submit){
+            name.placeholder = data.form_items.name;
+            email.placeholder = data.form_items.email;
+            message.placeholder = data.form_items.message;
+            subject.placeholder = data.form_items.subject;
+            submit.value = data.form_items.button_name;
+        }
 
+    }
+
+    function mainInfoTranslate(data){
+        const mainInfoDescription3 = document.getElementById('main_info_description_3') ?? null;
+        const mainInfoDescription2 = document.getElementById('main_info_description_2') ?? null;
+        const mainInfoDescription1 = document.getElementById('main_info_description_1') ?? null;
+        const mainInfoTitle = document.getElementById('main_info_title') ?? null;
+        const mainInfoSubHeading = document.getElementById('main_info_sub_heading') ?? null;
+        const slug = document.getElementById('slug') ?? null;
+        const slugTitle = document.getElementById('slug-title') ?? null;
+        const benefit1 = document.getElementById('benefit-1') ?? null;
+        const benefit2 = document.getElementById('benefit-2') ?? null;
+        const benefit3 = document.getElementById('benefit-3') ?? null;
+
+        if(benefit1 && benefit2 && benefit3){
+            benefit1.textContent = data.benefits.ben1
+            benefit2.textContent = data.benefits.ben2
+            benefit3.textContent = data.benefits.ben3
+        }
+
+        if(mainInfoDescription3 && mainInfoDescription2 && mainInfoDescription1 && mainInfoTitle && mainInfoSubHeading){
+            mainInfoDescription3.textContent = data.main_info_description_3;
+            mainInfoDescription2.textContent = data.main_info_description_2;
+            mainInfoDescription1.textContent = data.main_info_description_1;
+            mainInfoTitle.textContent = data.main_info_title;
+            mainInfoSubHeading.textContent = data.main_info_sub_heading;slug.textContent = data.slug;
+            slugTitle.textContent = data.slug_title;
+        }
+    }
     function keyboardNavigatePicker(picker, direction) {
         var index = Util.getIndexInArray(picker.languages, document.activeElement);
         index = (direction == 'next') ? index + 1 : index - 1;

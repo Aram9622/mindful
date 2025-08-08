@@ -11,12 +11,11 @@ function mainMenu($dir = "", $home = true) { ?>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item <?php if($home) : ?> active <?php endif; ?>"><a href="<?php if($home) : ?>#hero-wrap <?php else: ?> / <?php endif;?>" class="nav-link">Home</a></li>
-                    <li class="nav-item <?php if(!$home) : ?> active <?php endif; ?>"><a href="counselor/" class="nav-link">Counselor</a></li>
+                    <li class="nav-item <?php if($home) : ?> active <?php endif; ?>"><a href="<?php if($home) : ?>#hero-wrap <?php else: ?> / <?php endif;?>" class="nav-link" id="home-link">Home</a></li>
+                    <li class="nav-item <?php if(!$home) : ?> active <?php endif; ?>"><a href="counselor/" class="nav-link" id="counselor-link">Counselor</a></li>
                     <?php if($home) :?>
-                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link" id="about-link">About</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
                     <?php endif;?>
                 </ul>
             </div>
