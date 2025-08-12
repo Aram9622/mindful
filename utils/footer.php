@@ -1,4 +1,14 @@
 <?php
+/**
+ * Echoes the site's footer HTML block, including loader markup and script tags.
+ *
+ * The generated markup contains contact and social links, an "Explore" section,
+ * a copyright line that uses client-side JavaScript to insert the current year,
+ * a fullscreen loader SVG, and multiple <script> includes. All asset paths are
+ * prefixed with the provided $dir value.
+ *
+ * @param string $dir Optional base directory prefix for asset and script paths (defaults to "").
+ */
 function footer($dir = "") { ?>
     <footer class="ftco-footer">
         <div class="container">
