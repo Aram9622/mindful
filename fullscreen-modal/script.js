@@ -1,7 +1,6 @@
 const openEls = document.querySelectorAll("[data-open]");
 const closeEls = document.querySelectorAll("[data-close]");
 const isVisible = "is-visible";
-console.log(openEls, closeEls, "------------------------------sssssssss")
 
 for (const el of openEls) {
     el.addEventListener("click", function () {

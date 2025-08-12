@@ -120,6 +120,54 @@ Util.getIndexInArray = function (array, el) {
         if (document.activeElement.closest('.language-picker__dropdown') == picker.dropdown) picker.trigger.focus();
     };
 
+    function getUrlParameter(sParam) {
+        var sPageURL = window.location.search.substring(1),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+            }
+        }
+    };
+    function loadStaff() {
+        var service = getUrlParameter('service');
+        const lang = localStorage.getItem('lang') ?? "ar"
+        var url = '../staff-data.php?lang=' + lang;
+        if (service) {
+            url += '?service=' + service;
+        }
+
+        $.ajax({
+            url: url,
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                var staffContainer = $('#staff-container');
+                staffContainer.empty();
+                response.forEach(function(member) {
+                    var staffCard = `
+                        <div class="col-md-6 col-lg-3">
+                            <div class="staff open-modal"  data-id="${member.id}"  data-open="staff-modal">
+                                <div class="img-wrap d-flex align-items-stretch">
+                                    <div class="img align-self-stretch" style="background-image: url(${member.avatar});"></div>
+                                </div>
+                                <div class="text pt-3 text-center">
+                                    <h3>${member.name}</h3>
+                                    <span class="position mb-2">${member.position}</span>
+                                </div>
+                            </div>
+                        </div>`;
+                    staffContainer.append(staffCard);
+                });
+            }
+        });
+    }
+
     function initButtonPicker(picker) { // create the button element -> picker trigger
         // check if we need to add custom classes to the button trigger
         var customClasses = picker.element.getAttribute('data-trigger-class') ? ' ' + picker.element.getAttribute('data-trigger-class') : '';
@@ -212,6 +260,8 @@ Util.getIndexInArray = function (array, el) {
         menuTranslate(data.menu)
         formTranslate(data)
         mainInfoTranslate(data)
+        langNamePosition(data.staff)
+        footerTranslate(data.footer)
     }
     function menuTranslate(menuItem){
         const home = document.getElementById('home-link') ?? null;
@@ -232,8 +282,8 @@ Util.getIndexInArray = function (array, el) {
 
     function formTranslate(data){
         const formTitle = document.getElementById('form-title') ?? null;
-        formTitle.textContent = data.form_title
         if(formTitle){
+            formTitle.textContent = data.form_title
             formItemTranslate(data)
         }
     }
@@ -264,7 +314,15 @@ Util.getIndexInArray = function (array, el) {
         const benefit1 = document.getElementById('benefit-1') ?? null;
         const benefit2 = document.getElementById('benefit-2') ?? null;
         const benefit3 = document.getElementById('benefit-3') ?? null;
-
+        const serviceTitle = document.getElementById('service-title') ?? null;
+        const watchVideo = document.getElementById('watch_video') ?? null;
+        if(serviceTitle){
+            const service = localStorage.getItem('service') ?? null;
+            serviceTitle.textContent = data.services[service];
+        }
+        if(watchVideo){
+            watchVideo.textContent = data.watch_video
+        }
         if(benefit1 && benefit2 && benefit3){
             benefit1.textContent = data.benefits.ben1
             benefit2.textContent = data.benefits.ben2
@@ -279,6 +337,25 @@ Util.getIndexInArray = function (array, el) {
             mainInfoSubHeading.textContent = data.main_info_sub_heading;slug.textContent = data.slug;
             slugTitle.textContent = data.slug_title;
         }
+    }
+
+    function langNamePosition(data){
+        Object.values(data).forEach(member => {
+            $(`#name_${member.id}`).text(member.name)
+            $(`#position_${member.id}`).text(member.position)
+        });
+    }
+
+    function footerTranslate(data){
+        const haveQuestion = document.getElementById('have_question') ?? null;
+        const explore = document.getElementById('explore') ?? null;
+        const about = document.getElementById('footer-about') ?? null;
+        const contact = document.getElementById('footer-contact') ?? null;
+
+        haveQuestion.textContent = data.have_question
+        explore.textContent = data.explore
+        about.textContent = data.about
+        contact.textContent = data.contact
     }
     function keyboardNavigatePicker(picker, direction) {
         var index = Util.getIndexInArray(picker.languages, document.activeElement);
@@ -360,5 +437,6 @@ Util.getIndexInArray = function (array, el) {
         }
     }
     menuActiveInScroll()
+
 }());
 

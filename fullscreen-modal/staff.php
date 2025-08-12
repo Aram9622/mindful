@@ -1,2 +1,2 @@
 <?php
-require_once "staff/tatev.php";
+require_once "staff/staff.php";

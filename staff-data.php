@@ -1,65 +1,26 @@
 <?php
-require_once "fullscreen-modal/staff.php";
-$staff = [
-    [
-        "id" => 1,
-        "description" => tatev()
-    ],
-    [
-        "id" => 2,
-        "description" => ""
-    ],
-    [
-        "id" => 3,
-        "name" => "Ian Smith",
-        "position" => "Counselor",
-        "avatar" => "../images/staff-3.jpg",
-        "short-description" => "I am an ambitious workaholic, but apart from that, pretty simple person.",
-    ],
-    [
-        "id" => 4,
-        "name" => "Alicia Henderson",
-        "position" => "Counselor",
-        "avatar" => "../images/staff-4.jpg",
-        "short-description" => "I am an ambitious workaholic, but apart from that, pretty simple person.",
-    ],
-    [
-        "id" => 5,
-        "name" => "Lloyd Wilson",
-        "position" => "Counselor",
-        "avatar" => "../images/staff-5.jpg",
-        "short-description" => "I am an ambitious workaholic, but apart from that, pretty simple person.",
-    ],
-    [
-        "id" => 6,
-        "name" => "Rachel Parker",
-        "position" => "Counselor",
-        "avatar" => "../images/staff-6.jpg",
-        "short-description" => "I am an ambitious workaholic, but apart from that, pretty simple person.",
-    ],
-    [
-        "id" => 7,
-        "name" => "Ian Smith",
-        "position" => "Counselor",
-        "avatar" => "../images/staff-7.jpg",
-        "short-description" => "I am an ambitious workaholic, but apart from that, pretty simple person.",
-    ],
-    [
-        "id" => 8,
-        "name" => "Fred Henderson",
-        "position" => "Counselor",
-        "avatar" => "../images/staff-8.jpg",
-        "short-description" => "I am an ambitious workaholic, but apart from that, pretty simple person.",
-    ],
-];
-
-$staffId = $_POST["id"];
-
-$member = [];
-foreach ($staff as $person) {
-    if($person["id"] == $staffId){
-        $member = $person["description"];
-        break;
-    }
+if(isset($_GET["lang"])){
+    $trans = include_once "lang/" . $_GET["lang"] . '/' . $_GET["lang"] . ".php";
 }
-echo json_encode($member);
+else {
+    session_start();
+    $trans = include_once "lang/" . $_SESSION["lang"] . '/' . $_SESSION["lang"] . ".php";
+}
+
+
+$staff = $trans["staff"];
+
+if(isset($_POST["id"])){
+    $staffId = $_POST["id"];
+    $memberDescription = "";
+    foreach ($staff as $person) {
+        if($person["id"] == $staffId){
+            $memberDescription = $person["data"]();
+            break;
+        }
+    }
+    echo $memberDescription;
+}else{
+    header('Content-Type: application/json');
+    echo json_encode($staff);
+}

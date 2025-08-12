@@ -8860,7 +8860,8 @@ textarea.form-control {
 .ftco-appointment {
   background-position: center center !important;
   position: relative;
-  background-attachment: fixed; }
+  /*background-attachment: fixed;*/
+}
   .ftco-appointment .overlay {
     position: absolute;
     top: 0;

@@ -2,14 +2,16 @@
 
 	"use strict";
 
-	$(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll'
-  });
+	if ($(window).width() > 768) {
+		$(window).stellar({
+	    responsive: true,
+	    parallaxBackgrounds: true,
+	    parallaxElements: true,
+	    horizontalScrolling: false,
+	    hideDistantElements: false,
+	    scrollProperty: 'scroll'
+	  });
+	}
 
 
 	var fullHeight = function() {
@@ -187,41 +189,69 @@
 	contentWayPoint();
 
 
-	
-	// magnific popup
+
+	// magnific popup for images
 	$('.image-popup').magnificPopup({
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-     gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      verticalFit: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
-    }
-  });
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0, 1]
+		},
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300
+		}
+	});
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
+// magnific popup for YouTube / Vimeo / Google Maps
+	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false,
+		iframe: {
+			patterns: {
+				youtube: {
+					index: 'youtube.com/',
+					id: function(url) {
+						var match = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+						if (match) {
+							return match[1];
+						}
+						// if it's already an embed link
+						match = url.match("/embed\\/([^\\?\\&]+)/");
+						return match ? match[1] : null;
+					},
+					src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+				},
+				vimeo: {
+					index: 'vimeo.com/',
+					id: function(url) {
+						var match = url.match("/vimeo\\.com\\/(\\d+)/");
+						return match ? match[1] : null;
+					},
+					src: 'https://player.vimeo.com/video/%id%?autoplay=1'
+				},
+				gmaps: {
+					index: '//maps.google.',
+					src: '%id%&output=embed'
+				}
+			}
+		}
+	});
 
-    fixedContentPos: false
-  });
-
-  $('[data-toggle="popover"]').popover()
-	$('[data-toggle="tooltip"]').tooltip()
-
+	$('[data-toggle="popover"]').popover();
+	$('[data-toggle="tooltip"]').tooltip();
 })(jQuery);
 
 

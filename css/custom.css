@@ -60,3 +60,10 @@
   .heading-section h2 {
     font-size: 25px;
   }
+
+.staff .text {
+  max-height: 111px;
+}
+.staff .text h3 {
+  font-size: 18px;
+}
