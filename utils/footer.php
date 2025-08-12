@@ -65,9 +65,15 @@ function footer($dir = "") { ?>
     <script src="<?= $dir?>js/owl.carousel.min.js"></script>
     <script src="<?= $dir?>js/jquery.magnific-popup.min.js"></script>
     <script src="<?= $dir?>js/jquery.animateNumber.min.js"></script>
-<!--    <script src="--><?php //= $dir?><!--js/scrollax.min.js"></script>-->
-<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>-->
-<!--    <script src="--><?php //= $dir?><!--js/google-map.js"></script>-->
-<!--    <script src="--><?php //= $dir?><!--js/main.js"></script>-->
+    <script src="<?= $dir?>js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="<?= $dir?>js/google-map.js"></script>
+    <script src="<?= $dir?>js/main.js"></script>
+    <script src="<?= $dir?>js/app.js"></script>
+
+<!--    <script src="--><?php //= $dir?><!--js/app.js"></script>-->
+<!--    <script src="--><?php //= $dir?><!--js/app.js"></script>-->
+<!--    <script src="--><?php //= $dir?><!--js/app.js"></script>-->
+<!--    <script src="--><?php //= $dir?><!--js/app.js"></script>-->
 <!--    <script src="--><?php //= $dir?><!--js/app.js"></script>-->
 <?php } ?>
