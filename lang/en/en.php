@@ -14,6 +14,7 @@ return [
         "counselor" => "Our team",
         "about" => "About",
         "contact" => "Contact",
+        "service" => "Service",
     ],
     'form_title' => "Send a Message &amp; Get in touch!",
     'form_items' => [

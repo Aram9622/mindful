@@ -16,6 +16,18 @@ function mainMenu($dir = "", $home = true) { ?>
                     <?php if($home) :?>
                         <li class="nav-item"><a href="#about" class="nav-link" id="about-link">About</a></li>
                         <li class="nav-item"><a href="#contact" class="nav-link" id="contact-link">Contact</a></li>
+                        <li class="nav-item"><a href="#service" class="nav-link" id="service-link">Service</a>
+                        <ul class="dropdown-menu-service">
+                            <li class="li_itemss"><a class="dropdown-item" href="#">Service 1</a>
+                        <ul class="sub_dropdown">
+                            <li class="li_itemss"><a class="dropdown-item" href="#">Service 2</a></li>
+                            <li class="li_itemss"><a class="dropdown-item" href="#">Service 3</a></li>
+                            <li class="li_itemss"><a class="dropdown-item" href="#">Service 4</a></li>
+                            <li class="li_itemss"><a class="dropdown-item" href="#">Service 5</a></li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </li>
                     <?php endif;?>
                 </ul>
             </div>
