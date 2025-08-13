@@ -20,6 +20,5 @@ function head($dir = "") { ?>
 <link rel="stylesheet" href="<?= $dir?>css/style.css">
 <link rel="stylesheet" href="<?= $dir?>css/custom.css">
 <link rel="stylesheet" href="<?= $dir?>language-config/style.css">
-<link rel="stylesheet" href="<?= $dir?>css/menu.css">
 
 <?php } ?>
