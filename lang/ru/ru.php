@@ -19,300 +19,105 @@ return [
             "name" => "Анна Тоникян",
             "position" => "специалист по грудному вскармливанию",
             "avatar" => "../images/staff/anna.jpg",
-            "data" => '<figure>
-    <img src="../images/staff/anna.jpg" alt="sunset">
-</figure>
-<div class="text">
-    <div>
-        <h2>Anna</h2>
-        <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-            framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-            giving us complete control over how it works and looks.</p>
-        <a class="cta"
-           href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-           target="_blank">Read Full Tutorial</a>
-    </div>
-</div>'
+            "data" => 'cvAnnaRU'
         ],
         "aneta" => [
             "id" => 3,
             "name" => "Анета Мелконян",
             "position" => "психиатр- психотерапевт",
             "avatar" => "../images/staff/Aneta.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Aneta.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Aneta</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvAnetaRU'
         ],
         "eliz" => [
             "id" => 15,
             "name" => "Элиза Погосян",
             "position" => "администратор",
             "avatar" => "../images/staff/Eliz.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Eliz.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Eliz</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvElizRU'
         ],
         "hermine" => [
             "id" => 4,
             "name" => "Эрмине Акопян",
             "position" => "психолог-психотерапевт",
             "avatar" => "../images/staff/Hermine.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Hermine.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Hermine</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvHermineRU'
         ],
         "lena" => [
             "id" => 6,
             "name" => "Лена Манукян",
             "position" => "психолог- психотерапевт",
             "avatar" => "../images/staff/Lena.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Lena.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Lena</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvLenaRU'
         ],
         "lilith" => [
             "id" => 16,
             "name" => "Лилит Хачатрян",
             "position" => "СММ специалист",
             "avatar" => "../images/staff/Lilith.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Lilith.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Lilith</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvLilithRU'
         ],
         "mariam" => [
             "id" => 7,
             "name" => "Мариам Тонян",
             "position" => "психолог-психотерапевт",
             "avatar" => "../images/staff/Mariam.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Mariam.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Mariam</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvMariamRU'
         ],
         "mariane" => [
             "id" => 5,
             "name" => "Марианэ Абраамян",
             "position" => "психолог- психотерапевт",
             "avatar" => "../images/staff/Mariane.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Mariane.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Mariane</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvMarianeRU'
         ],
         "nana" => [
             "id" => 9,
             "name" => "Нана Памбухчян",
             "position" => "психолог-психотерапевт",
             "avatar" => "../images/staff/Nana.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Nana.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Nana</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvNanaRU'
         ],
         "qristine" => [
             "id" => 13,
             "name" => "Кристине Аветисян",
             "position" => "психолог- психотерапевт, ко-воркинг",
             "avatar" => "../images/staff/Qristine.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Qristine.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Qristine</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvQristineRU'
         ],
         "saten" => [
             "id" => 8,
             "name" => "Сатен Саргсян",
             "position" => "психолог-психотерапевт",
             "avatar" => "../images/staff/Saten.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Saten.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Saten</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvSatenRU'
         ],
         "satine" => [
             "id" => 11,
             "name" => "Сатинэ Барсегян",
             "position" => "детский сихолог- психотерапевт",
             "avatar" => "../images/staff/Satine.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Satine.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Satine</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvSatineRU'
         ],
         "taguhi" => [
             "id" => 10,
             "name" => "Тагуи Асатрян",
             "position" => "психолог-психотерапевт",
             "avatar" => "../images/staff/Taguhi.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/Taguhi.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Taguhi</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvTaguhiRU'
         ],
         "armen" => [
             "id" => 2,
             "name" => "Армен Арутюнян",
             "position" => "психиатр- психотерапевт",
             "avatar" => "../images/staff/armen.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/armen.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Armen</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "data" => 'cvArmenRU'
         ],
         "svetlana" => [
             "id" => 14,
             "name" => "Светлана Никогосян",
             "position" => "психолог-психотерапевт, ко-воркинг",
-            "avatar" => "../images/staff-6.jpg",
-            "data" => '<figure>
-            <img src="../images/staff/armen.jpg" alt="sunset">
-                </figure>
-            <div class="text">
-                <div>
-                    <h2>Armen</h2>
-                    <p>In this tutorial, we’ll learn how to build JavaScript modals (popup windows) without using a
-                        framework like Bootstrap, or a third party library. We’ll build the whole thing from scratch,
-                        giving us complete control over how it works and looks.</p>
-                    <a class="cta"
-                       href="https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t?_ga=2.253327169.991891258.1694331067-134669035.1678436241"
-                       target="_blank">Read Full Tutorial</a>
-                </div>
-            </div>'
+            "avatar" => "../images/staff/Svetlana.png",
+            "data" => 'cvSvetlanaRU'
         ],
     ],
     "menu" => [

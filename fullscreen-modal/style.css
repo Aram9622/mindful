@@ -115,6 +115,7 @@ button {
     top: 1rem;
     right: 1rem;
     font-size: 2rem;
+    z-index: 1;
 }
 
 /* ANIMATIONS

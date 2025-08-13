@@ -14,3 +14,4 @@ require_once "saten/saten.php";
 require_once "satine/satine.php";
 require_once "taguhi/taguhi.php";
 require_once "armen/armen.php";
+require_once "svetlana/svetlana.php";

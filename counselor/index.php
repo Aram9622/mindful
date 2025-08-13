@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION["lang"])){
+    $_SESSION["lang"] = "ar";
+}
 $trans = require_once "../lang/" . $_SESSION["lang"] . '/' . $_SESSION["lang"] . ".php";
 $staff = $trans["staff"];
 
