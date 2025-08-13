@@ -268,16 +268,22 @@ Util.getIndexInArray = function (array, el) {
         const counselor = document.getElementById('counselor-link') ?? null;
         const about = document.getElementById('about-link') ?? null;
         const contact = document.getElementById('contact-link') ?? null;
+        const service = document.getElementById('service-link') ?? null;
+
         if(home && counselor && about && contact){
-            document.getElementById('home-link').textContent = menuItem.home;
-            document.getElementById('counselor-link').textContent = menuItem.counselor;
-            document.getElementById('about-link').textContent = menuItem.about;
-            document.getElementById('contact-link').textContent = menuItem.contact;
+            home.textContent = menuItem.home;
+            counselor.textContent = menuItem.counselor;
+            about.textContent = menuItem.about;
+            contact.textContent = menuItem.contact;
         }
         else{
-            document.getElementById('home-link').textContent = menuItem.home;
-            document.getElementById('counselor-link').textContent = menuItem.counselor;
+            home.textContent = menuItem.home;
+            counselor.textContent = menuItem.counselor;
         }
+        if (service) {
+            service.textContent = menuItem.service;
+        }
+        
     }
 
     function formTranslate(data){
